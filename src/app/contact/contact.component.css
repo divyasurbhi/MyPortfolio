@@ -1,0 +1,9 @@
+.main {
+    max-width: 4000px;
+    margin: auto;
+  }
+  label{
+    margin:20px;
+    margin-left:40px;
+    margin-right:30px;
+  }

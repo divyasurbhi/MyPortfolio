@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html,body {
+ height:100%;
+
+  }
+  .bg{
+    background-image: url(../../assets/images/background2.jpg);
+    height: 100%; 
+/* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+		top: 0;
+		left: 0;
+  }
+  
+  /* Center website */
+  .main {
+    max-width: 2000px;
+    height:100vh;
+    margin: auto;
+  }
+  .centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  h1 {
+    font-size: 40px;
+    word-break: break-all;
+  }
+  
+  .row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
