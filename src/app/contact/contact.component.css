@@ -1,9 +1,6 @@
 .main {
     max-width: 4000px;
-    margin: auto;
+    margin:2opx;
+   padding: 20px;
   }
-  label{
-    margin:20px;
-    margin-left:40px;
-    margin-right:30px;
-  }
+  

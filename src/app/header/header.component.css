@@ -22,8 +22,9 @@
   .main {
     max-width: 2000px;
     height:100vh;
-    margin: auto;
-  }
+    margin:auto;
+    }
+  
   .centered{
     position: absolute;
     top: 50%;

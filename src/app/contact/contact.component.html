@@ -3,30 +3,91 @@
   <div>
 <h4>Want to contact me?</h4>
 <h6>Please provide following details..</h6>
-<label>
-  Your Name:
-    <input type="text" [formControl]="name">
-  </label>
+
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform.form)">
+ 
+    <div class="row">
+  <div class="col-md-6">
+  <label>
+  Your Name: </label>
+  </div>
+  <div class="col-md-6">
+    <input type="text" class="formControl" name="name" ngModel #nameField="ngModel" required>
+    <div class="alert alert-danger" 
+     *ngIf="nameField.touched && nameField.errors?.required">
+     Your name is required
+</div>
+  </div>
+</div>
+
  <br>
+ 
+ 
+ <div class="row">
+  <div class="col-md-6">
 <label>
     Your Email Id:
-    <input type="text" [formControl]="email">
   </label>
+  </div>
+  <div class="col-md-6">
+    <input type="text" class="formControl" name="email" ngModel #emailField="ngModel" required>
+    <div class="alert alert-danger" 
+     *ngIf="emailField.touched && emailField.errors?.required">
+    Email is required
+</div>
+  </div>
+  </div>
+
   <br>
-  <label>
-    Your Company:
-    <input type="text" [formControl]="company">
-  </label>
+
   
+  <div class="row">
+    <div class="col-md-6">
   <label>
-    Designation:
-    <input type="text" [formControl]="desig">
-  </label>
+    Your Company:</label>
+    </div>
+    <div class="col-md-6">
+    <input type="text" class="formControl" name="company" ngModel #companyField="ngModel" required>
+    <div class="alert alert-danger" 
+     *ngIf="companyField.touched && companyField.errors?.required">
+     The company name is required
+</div>
+   </div>
+   </div>
+  
   <br>
+
+  
+  <div class="row">
+    <div class="col-md-6">
   <label>
-   Any Message for me:
-    <input style='height:150px; width:200px;' type="text" [formControl]="msg">
-  </label>
+    Designation:</label>
+    </div>
+    <div class="col-md-6">
+    <input type="text"class="formControl" name="desig" ngModel #desigField="ngModel" required>
+    <div class="alert alert-danger" 
+     *ngIf="desigField.touched && desigField.errors?.required">
+     Your designation name is required
+</div>
+  </div>
+  </div>
+ 
+  <br>
+
+  
+  <div class="row">
+    <div class="col-md-6">
+   <label>Any Message for me: </label></div>
+   <div class="col-md-6">
+   <input style='height:100px; width:300px;' type="text" class="formControl" name="msg" ngModel #msgField="ngModel">
+   
+   </div>
+  </div>
+ 
+  <br>
+
+  <button type="submit" style="margin:20px;" [disabled]="!myform.valid">Submit</button>
+</form>
 </div>
 </div>
 
