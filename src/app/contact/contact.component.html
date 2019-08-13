@@ -4,11 +4,7 @@
 <h4>Want to contact me?</h4>
 <h6>Please provide following details..</h6>
 
-<<<<<<< HEAD
 <form  name="form" myform="ngForm" (ngSubmit)="onSubmit(myform.form)">
-=======
-<form #myform="ngForm" (ngSubmit)="onSubmit(myform.form)">
->>>>>>> f98963d5c258e596db5714e14cbc1a90bdd19e66
  
     <div class="row">
   <div class="col-md-6">
@@ -16,11 +12,7 @@
   Your Name: </label>
   </div>
   <div class="col-md-6">
-<<<<<<< HEAD
     <input type="text" class="formControl" name="name"  nameField="ngModel" required>
-=======
-    <input type="text" class="formControl" name="name" ngModel #nameField="ngModel" required>
->>>>>>> f98963d5c258e596db5714e14cbc1a90bdd19e66
     <div class="alert alert-danger" 
      *ngIf="nameField.touched && nameField.errors?.required">
      Your name is required
@@ -38,11 +30,7 @@
   </label>
   </div>
   <div class="col-md-6">
-<<<<<<< HEAD
     <input type="text" class="formControl" name="email"  emailField="ngModel" required>
-=======
-    <input type="text" class="formControl" name="email" ngModel #emailField="ngModel" required>
->>>>>>> f98963d5c258e596db5714e14cbc1a90bdd19e66
     <div class="alert alert-danger" 
      *ngIf="emailField.touched && emailField.errors?.required">
     Email is required
