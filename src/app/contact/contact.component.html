@@ -4,7 +4,11 @@
 <h4>Want to contact me?</h4>
 <h6>Please provide following details..</h6>
 
+<<<<<<< HEAD
 <form  name="form" myform="ngForm" (ngSubmit)="onSubmit(myform.form)">
+=======
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform.form)">
+>>>>>>> f98963d5c258e596db5714e14cbc1a90bdd19e66
  
     <div class="row">
   <div class="col-md-6">
@@ -12,7 +16,11 @@
   Your Name: </label>
   </div>
   <div class="col-md-6">
+<<<<<<< HEAD
     <input type="text" class="formControl" name="name"  nameField="ngModel" required>
+=======
+    <input type="text" class="formControl" name="name" ngModel #nameField="ngModel" required>
+>>>>>>> f98963d5c258e596db5714e14cbc1a90bdd19e66
     <div class="alert alert-danger" 
      *ngIf="nameField.touched && nameField.errors?.required">
      Your name is required
@@ -30,7 +38,11 @@
   </label>
   </div>
   <div class="col-md-6">
+<<<<<<< HEAD
     <input type="text" class="formControl" name="email"  emailField="ngModel" required>
+=======
+    <input type="text" class="formControl" name="email" ngModel #emailField="ngModel" required>
+>>>>>>> f98963d5c258e596db5714e14cbc1a90bdd19e66
     <div class="alert alert-danger" 
      *ngIf="emailField.touched && emailField.errors?.required">
     Email is required
@@ -47,7 +59,11 @@
     Your Company:</label>
     </div>
     <div class="col-md-6">
+<<<<<<< HEAD
     <input type="text" class="formControl" name="company"  companyField="ngModel" required>
+=======
+    <input type="text" class="formControl" name="company" ngModel #companyField="ngModel" required>
+>>>>>>> f98963d5c258e596db5714e14cbc1a90bdd19e66
     <div class="alert alert-danger" 
      *ngIf="companyField.touched && companyField.errors?.required">
      The company name is required
@@ -64,7 +80,11 @@
     Designation:</label>
     </div>
     <div class="col-md-6">
+<<<<<<< HEAD
     <input type="text"class="formControl" name="desig"  desigField="ngModel" required>
+=======
+    <input type="text"class="formControl" name="desig" ngModel #desigField="ngModel" required>
+>>>>>>> f98963d5c258e596db5714e14cbc1a90bdd19e66
     <div class="alert alert-danger" 
      *ngIf="desigField.touched && desigField.errors?.required">
      Your designation name is required
@@ -79,7 +99,11 @@
     <div class="col-md-6">
    <label>Any Message for me: </label></div>
    <div class="col-md-6">
+<<<<<<< HEAD
    <input style='height:100px; width:300px;' type="text" class="formControl" name="msg"  msgField="ngModel">
+=======
+   <input style='height:100px; width:300px;' type="text" class="formControl" name="msg" ngModel #msgField="ngModel">
+>>>>>>> f98963d5c258e596db5714e14cbc1a90bdd19e66
    
    </div>
   </div>
