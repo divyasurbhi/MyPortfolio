@@ -1,0 +1,93 @@
+
+<div class="main border border-primary" style="background-color: powderblue">
+  <div>
+<h4>Want to contact me?</h4>
+<h6>Please provide following details..</h6>
+
+<form  name="form" myform="ngForm" (ngSubmit)="onSubmit(myform.form)">
+ 
+    <div class="row">
+  <div class="col-md-6">
+  <label>
+  Your Name: </label>
+  </div>
+  <div class="col-md-6">
+    <input type="text" class="formControl" name="name"  nameField="ngModel" required>
+    <div class="alert alert-danger" 
+     *ngIf="nameField.touched && nameField.errors?.required">
+     Your name is required
+</div>
+  </div>
+</div>
+
+ <br>
+ 
+ 
+ <div class="row">
+  <div class="col-md-6">
+<label>
+    Your Email Id:
+  </label>
+  </div>
+  <div class="col-md-6">
+    <input type="text" class="formControl" name="email"  emailField="ngModel" required>
+    <div class="alert alert-danger" 
+     *ngIf="emailField.touched && emailField.errors?.required">
+    Email is required
+</div>
+  </div>
+  </div>
+
+  <br>
+
+  
+  <div class="row">
+    <div class="col-md-6">
+  <label>
+    Your Company:</label>
+    </div>
+    <div class="col-md-6">
+    <input type="text" class="formControl" name="company"  companyField="ngModel" required>
+    <div class="alert alert-danger" 
+     *ngIf="companyField.touched && companyField.errors?.required">
+     The company name is required
+</div>
+   </div>
+   </div>
+  
+  <br>
+
+  
+  <div class="row">
+    <div class="col-md-6">
+  <label>
+    Designation:</label>
+    </div>
+    <div class="col-md-6">
+    <input type="text"class="formControl" name="desig"  desigField="ngModel" required>
+    <div class="alert alert-danger" 
+     *ngIf="desigField.touched && desigField.errors?.required">
+     Your designation name is required
+</div>
+  </div>
+  </div>
+ 
+  <br>
+
+  
+  <div class="row">
+    <div class="col-md-6">
+   <label>Any Message for me: </label></div>
+   <div class="col-md-6">
+   <input style='height:100px; width:300px;' type="text" class="formControl" name="msg"  msgField="ngModel">
+   
+   </div>
+  </div>
+ 
+  <br>
+
+  <button type="submit" style="margin:20px;" [disabled]="!myform.valid">Submit</button>
+</form>
+</div>
+</div>
+
